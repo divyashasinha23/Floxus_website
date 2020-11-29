@@ -2,6 +2,8 @@ const express = require("express");
 const connectDB = require('./config/db');
 const dotenv = require('dotenv');
 const colors = require('colors');
+const courseRoutes = require('./routes/courseRoutes');
+const courses = require('./data/courses');
 
 dotenv.config();
 
@@ -9,11 +11,14 @@ connectDB()
 const app = express();
 
 app.use(express.json());
-
+app.use('/api/courses', courseRoutes);
 
  
 app.get("/", (req,res) => {
     res.send("Server running");
+});
+app.get('/courses', (req,res) => {
+    res.json(courses);
 });
 
 PORT = process.env.PORT;
