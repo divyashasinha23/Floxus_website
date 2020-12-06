@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/UserModel');
 
-const requireAuth = (req,res,next) => {
+const authRequire = (req,res,next) => {
     const token = req.cookies.jwt;
 
 // json web token is verified
@@ -9,7 +9,6 @@ const requireAuth = (req,res,next) => {
         jwt.verify(token, 'courseToken',(err, decodedToken) =>{
           if(err){
               console.log(err.message);
-              res.redirect('/signin');
           }
           else{
               console.log(decodedToken);
@@ -18,8 +17,9 @@ const requireAuth = (req,res,next) => {
         });
     }
     else{
-        res.redirect('/signin');
+        res.status(401);
+        throw new Error('no token found');
     }
 }
 
-module.exports = requireAuth;
+module.exports = authRequire;
