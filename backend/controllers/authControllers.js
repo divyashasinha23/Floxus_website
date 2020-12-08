@@ -58,10 +58,10 @@ module.exports.signup_post = async (req,res) => {
             token: createToken(user._id),
         });
         }
-        // else{
-        //     res.status(400);
-        //     throw new Error('Invalid user details');
-        // }
+        else{
+            res.status(400);
+            throw new Error('Invalid user details');
+        }
     }
     catch(err){
       const errors = handleErrors(err);
