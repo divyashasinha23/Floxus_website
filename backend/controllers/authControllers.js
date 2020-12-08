@@ -1,15 +1,14 @@
 const User = require('../models/userModel');
 const jwt = require('jsonwebtoken');
+const asyncHandler = require('express-async-handler');
 
 //json web token
 
  const createToken = (id) => {
      return jwt.sign({id}, 'courseToken',{
      expiresIn: '30d',
- });
+ })
 };
-
-//validation errors 
 
 const handleErrors = (err) => {
   console.log(err.message, err.code);
