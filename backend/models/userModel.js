@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const {isEmail} = require('validator');
 const bcrypt = require('bcrypt');
 
+
 const userSchema = new mongoose.Schema
 ({
     name: {
@@ -29,7 +30,6 @@ const userSchema = new mongoose.Schema
     },
     isAdmin:{
         type: Boolean,
-        required: true,
     },
 });
  userSchema.pre('save', async function(next){
@@ -39,17 +39,17 @@ const userSchema = new mongoose.Schema
   });
 
 // //login user
-// userSchema.statics.signin = async function(email, password){
-//     const user = await this.findOne({email});
-//     if (user){
-//   const auth = await bcrypt.compare(password, user.password);
-//   if(auth){
-//       return user;//res.json(email,password,username)
-//   }
-//   throw('incorrect password');
-//     }
-//     throw Error('incorrect email');
-// }
+userSchema.statics.signin = async function(email, password){
+    const user = await this.findOne({email});
+    if (user){
+  const auth = await bcrypt.compare(password, user.password);
+  if(auth){
+    return user;
+  }
+  throw('incorrect password');
+    }
+    throw Error('incorrect email');
+}
 
 // jwt
 

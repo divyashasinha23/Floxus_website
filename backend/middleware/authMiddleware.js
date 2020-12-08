@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/UserModel');
 
-const authRequire = (req,res,next) => {
+const authRequire = async (req,res,next) => {
     const token = req.cookies.jwt;
 
 // json web token is verified
