@@ -1,7 +1,9 @@
+import HeroSection from './components/HeroSection/HeroSection';
+
 function App() {
   return (
     <div>
-      <h1>Floxus</h1>
+      <HeroSection />
     </div>
   );
 }
