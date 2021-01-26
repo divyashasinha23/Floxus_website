@@ -16,6 +16,10 @@ const HeroContainer = styled.div`
   display: flex;
   height: 100vh;
   width: 80%;
+
+  @media (max-width: 496px) {
+    flex-direction: column;
+  }
 `;
 
 const LeftContainer = styled.div`
@@ -30,6 +34,10 @@ const RightContainer = styled.div`
   display: flex;
   flex-basis: 40%;
   height: 100vh;
+
+  @media (max-width: 496px) {
+    display: none;
+  }
 `;
 
 const ContentBox = styled.div`
@@ -37,15 +45,24 @@ const ContentBox = styled.div`
   flex-direction: column;
   height: 50%;
   width: 100%;
+
+  @media (max-width: 496px) {
+    height: 80%;
+  }
 `;
 
 const Heading = styled.p`
-  font-size: 45px;
+  font-size: 3em;
   color: white;
   font-weight: 400;
   letter-spacing: 1.5px;
   ${'' /* height: 200px; */}
   margin-bottom: 10px;
+
+  @media (max-width: 496px) {
+    font-size: 2em;
+    letter-spacing: 0;
+  }
 `;
 
 const HighLight = styled.span`
@@ -77,6 +94,10 @@ const ExploreButton = styled.button`
   font-size: 17px;
   font-weight: 500;
   cursor: pointer;
+
+  @media (max-width: 496px) {
+    height: 55px;
+  }
 `;
 
 const HeroSection = () => {
