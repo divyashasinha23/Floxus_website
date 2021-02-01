@@ -1,7 +1,6 @@
 {
   "name": "floxus_website",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server",
@@ -22,5 +21,15 @@
     "mongoose": "^5.10.16",
     "nodemon": "^2.0.6",
     "validator": "^13.5.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyashasinha23/Floxus_website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/divyashasinha23/Floxus_website/issues"
+  },
+  "homepage": "https://github.com/divyashasinha23/Floxus_website#readme",
+  "description": ""
 }
