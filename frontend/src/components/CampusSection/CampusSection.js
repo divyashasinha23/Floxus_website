@@ -84,6 +84,12 @@ const CampusButton = styled.button`
   }
 `;
 
+const CampusImage = styled.div`
+  display: flex;
+  flex-basis: 20%;
+  height: 100vh;
+`;
+
 function CampusSection() {
   return (
     <>
@@ -108,7 +114,7 @@ function CampusSection() {
               </CampusButton>
             </CampusContent>
           </CampusData>
-          <div class="Campus_imageContainer"></div>
+          <CampusImage></CampusImage>
         </CampusContainer>
       </CampusWrapper>
     </>
