@@ -65,19 +65,19 @@ const Description = styled.div`
 `;
 
 const CampusButton = styled.button`
-  display: flex;
-  width: 200px;
-  height: 45px;
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 22.5px;
-  margin-top: 20px;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 17px;
-  font-weight: 500;
-  cursor: pointer;
+    display: flex;
+    width: 200px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 22.5px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 15px 32px
 
   @media (max-width: 496px) {
     height: 55px;
@@ -101,8 +101,7 @@ function CampusSection() {
                 Trusted across<br></br>
                 <span style={{ color: ' #ed841f', fontWeight: 600 }}>
                   5+ College Campus
-                </span>
-                in india.
+                </span>  in india.
               </Heading>
               <Description>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
