@@ -1,5 +1,5 @@
 .toolbar {
-  position: fixed;
+  /* position: fixed; */
   width: 80%;
   background-color: #3c378e;
   height: 50px;
@@ -28,6 +28,10 @@
   font-size: 1.5rem;
 }
 
+.toggle {
+  display: none;
+}
+
 .spacer {
   flex: 2;
 }
@@ -52,4 +56,14 @@
 .toolbar_navigation-items a:active {
   color: white;
   text-decoration: none;
+}
+
+@media (max-width: 496px) {
+  .toggle {
+    display: flex;
+  }
+
+  .toolbar_navigation-items ul {
+    display: none;
+  }
 }

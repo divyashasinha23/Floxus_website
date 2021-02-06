@@ -1,14 +1,19 @@
 import React from 'react';
 import DrawerToggleButton from './DrawerToggleButton';
 import './Toolbar.css';
+import * as HiIcons from 'react-icons/hi';
 
 const Toolbar = (props) => {
   return (
     <header className="toolbar">
       {/* <div className="toolbar_container"> */}
       <nav className="toolbar__navigation">
-        <div>
-          <DrawerToggleButton click={props.drawerClickHandler} />
+        <div className="toggle">
+          <HiIcons.HiMenuAlt1
+            style={{ fontSize: '40px', color: 'white' }}
+            onClick={props.drawerClickHandler}
+          />
+          {/* <DrawerToggleButton click={props.drawerClickHandler} /> */}
         </div>
         <div className="toolbar__logo">
           <a href="/">THE LOGO</a>
