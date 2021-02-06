@@ -1,5 +1,4 @@
 import React from 'react';
-import DrawerToggleButton from './DrawerToggleButton';
 import './Toolbar.css';
 import * as HiIcons from 'react-icons/hi';
 
