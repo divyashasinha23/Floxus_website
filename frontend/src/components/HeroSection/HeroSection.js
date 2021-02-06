@@ -1,11 +1,22 @@
-import React from 'react';
-import { jsx, css } from '@emotion/react';
+import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import * as FaIcons from 'react-icons/fa';
+import Toolbar from '../Toolbar/Toolbar';
+import Sidebar from '../Toolbar/Sidebar';
+import Backdrop from '../Backdrop/Backdrop';
+
+const NavContainer = styled.div`
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  background-color: #3c378e;
+  justify-content: center;
+  align-items: center;
+`;
 
 const HeroWrapper = styled.div`
   display: flex;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   background-color: #3c378e;
   justify-content: center;
@@ -100,33 +111,65 @@ const ExploreButton = styled.button`
   }
 `;
 
-const HeroSection = () => {
-  return (
-    <>
-      <HeroWrapper>
-        <HeroContainer>
-          <LeftContainer>
-            <ContentBox>
-              <Heading>
-                Solve Real-World Problems with{' '}
-                <HighLight>Project Based Learning</HighLight>
-              </Heading>
-              <Excerpt>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam.
-              </Excerpt>
-              <ExploreButton>
-                Explore
-                <FaIcons.FaArrowRight style={{ marginLeft: '10px' }} />
-              </ExploreButton>
-            </ContentBox>
-          </LeftContainer>
-          <RightContainer></RightContainer>
-        </HeroContainer>
-      </HeroWrapper>
-    </>
-  );
-};
+class HeroSection extends Component {
+  state = {
+    sideDrawerOpen: false,
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {
+        sideDrawerOpen: !prevState.sideDrawerOpen,
+      };
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({
+      sideDrawerOpen: false,
+    });
+  };
+
+  render() {
+    let sideDrawer;
+    let backdrop;
+    if (this.state.sideDrawerOpen) {
+      sideDrawer = <Sidebar />;
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
+    return (
+      <>
+        <NavContainer>
+          <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+          {sideDrawer}
+          {backdrop}
+        </NavContainer>
+
+        <HeroWrapper>
+          <HeroContainer>
+            <LeftContainer>
+              <ContentBox>
+                <Heading>
+                  Solve Real-World Problems with{' '}
+                  <HighLight>Project Based Learning</HighLight>
+                </Heading>
+                <Excerpt>
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam.
+                </Excerpt>
+                <ExploreButton>
+                  Explore
+                  <FaIcons.FaArrowRight style={{ marginLeft: '10px' }} />
+                </ExploreButton>
+              </ContentBox>
+            </LeftContainer>
+            <RightContainer></RightContainer>
+          </HeroContainer>
+        </HeroWrapper>
+      </>
+    );
+  }
+}
 
 export default HeroSection;
