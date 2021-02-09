@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import * as FaIcons from 'react-icons/fa';
-import Toolbar from '../Toolbar/Toolbar';
-import Sidebar from '../Toolbar/Sidebar';
-import Backdrop from '../Backdrop/Backdrop';
 
 const NavContainer = styled.div`
   display: flex;
@@ -16,7 +13,7 @@ const NavContainer = styled.div`
 
 const HeroWrapper = styled.div`
   display: flex;
-  height: 90vh;
+  height: 70vh;
   width: 100%;
   background-color: #3c378e;
   justify-content: center;
@@ -112,39 +109,9 @@ const ExploreButton = styled.button`
 `;
 
 class HeroSection extends Component {
-  state = {
-    sideDrawerOpen: false,
-  };
-
-  drawerToggleClickHandler = () => {
-    this.setState((prevState) => {
-      return {
-        sideDrawerOpen: !prevState.sideDrawerOpen,
-      };
-    });
-  };
-
-  backdropClickHandler = () => {
-    this.setState({
-      sideDrawerOpen: false,
-    });
-  };
-
   render() {
-    let sideDrawer;
-    let backdrop;
-    if (this.state.sideDrawerOpen) {
-      sideDrawer = <Sidebar />;
-      backdrop = <Backdrop click={this.backdropClickHandler} />;
-    }
     return (
       <>
-        <NavContainer>
-          <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-          {sideDrawer}
-          {backdrop}
-        </NavContainer>
-
         <HeroWrapper>
           <HeroContainer>
             <LeftContainer>
