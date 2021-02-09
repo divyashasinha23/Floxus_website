@@ -9,6 +9,7 @@ const CourseHeadingWrapper = styled.div`
   background-color: #f9f9f9;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
 `;
 
 const CourseHeadingContainer = styled.div`
