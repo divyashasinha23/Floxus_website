@@ -7,6 +7,9 @@ const FloxusFeatureLayout = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
+  @media (max-width: 496px) {
+    height: auto;
+  }
 `;
 
 const FloxusFeatureWrapper = styled.div`
@@ -14,12 +17,18 @@ const FloxusFeatureWrapper = styled.div`
   flex-direction: column;
   width: 70%;
   height: 80vh;
+  @media (max-width: 496px) {
+    height: auto;
+  }
 `;
 
 const FloxusFeatureDescription = styled.div`
   display: flex;
   width: 100%;
   flex-basis: 50%;
+  @media (max-width: 496px) {
+    flex-direction: column;
+  }
 `;
 
 const FloxusFeatureDescriptionLeft = styled.div`
@@ -37,6 +46,20 @@ const FloxusFeatureDescriptionRight = styled.div`
   justify-content: center;
   align-items: center;
   ${'' /* background-color: black; */}
+
+  p {
+    color: #827fa5;
+    padding-right: 15%;
+    padding-left: 20%;
+    font-size: 15px;
+  }
+
+  @media (max-width: 496px) {
+    p {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 `;
 
 const Heading = styled.p`
@@ -46,6 +69,11 @@ const Heading = styled.p`
   padding-left: 20%;
   letter-spacing: 1px;
   ${'' /* padding-right: 16%; */}
+  @media(max-width:496px) {
+    padding-left: 0;
+    font-size: 30px;
+    text-align: center;
+  }
 `;
 
 const FloxusFeatureContainer = styled.div`
@@ -53,6 +81,10 @@ const FloxusFeatureContainer = styled.div`
   width: 100%;
   flex-basis: 50%;
   justify-content: space-around;
+
+  @media (max-width: 496px) {
+    flex-direction: column;
+  }
 `;
 
 const FloxusFeatureCard = styled.div`
@@ -62,6 +94,10 @@ const FloxusFeatureCard = styled.div`
   border: 1.5px solid #cecce3;
   border-radius: 10px;
   box-shadow: 0px 10px 99px #4c4a6e26;
+
+  @media (max-width: 496px) {
+    margin-top: 15px;
+  }
 `;
 
 const Floxusfeature = () => {
@@ -77,27 +113,13 @@ const Floxusfeature = () => {
               </Heading>
             </FloxusFeatureDescriptionLeft>
             <FloxusFeatureDescriptionRight>
-              <p
-                style={{
-                  color: '#827FA5',
-                  paddingRight: '15%',
-                  paddingLeft: '20%',
-                  fontSize: '15px',
-                }}
-              >
+              <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod. Lorem ipsum dolor sit amet, consetetur
                 sadipscing elitr.
               </p>
 
-              <p
-                style={{
-                  color: '#827FA5',
-                  paddingRight: '15%',
-                  paddingLeft: '20%',
-                  fontSize: '15px',
-                }}
-              >
+              <p>
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                 diam nonumy eirmod. Lorem ipsum dolor sit amet, consetetur
                 sadipscing elitr.
