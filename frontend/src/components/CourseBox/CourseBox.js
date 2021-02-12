@@ -10,31 +10,53 @@ const CourseBox = styled.div`
   border-radius: 0px 48px 48px 0px;
   margin-top: 30px;
   margin-left: 20px;
+
+  @media (max-width: 496px) {
+    flex-direction: column;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+  }
 `;
 
 const BoxLeft = styled.div`
   display: flex;
-  flex-basis: 35%;
+  flex-basis: 40%;
   height: 100%;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 496px) {
+    ${'' /* background-color: black; */}
+    height:150px
+  }
 `;
 
 const BoxRight = styled.div`
   display: flex;
   flex-direction: column;
-  flex-basis: 65%;
+  flex-basis: 60%;
   height: 100%;
   justify-content: center;
   ${'' /* background-color: black; */}
+  @media(max-width:496px) {
+    p {
+      margin-left: 4%;
+    }
+  }
 `;
 const ImageContainer = styled.div`
   display: flex;
-  height: 80%;
-  width: 110%;
+  height: 100%;
+  width: 95%;
   background: #3c378e;
   border-radius: 8px;
   margin-left: -30%;
+
+  @media (max-width: 496px) {
+    margin-left: 0;
+    margin-top: 5%;
+  }
 `;
 const BoxHeading = styled.p`
   font-size: 20px;
