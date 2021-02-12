@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import cloud from '../../images/cloud2x.png';
 
 const CourseBox = styled.div`
   display: flex;
@@ -52,7 +53,10 @@ const ImageContainer = styled.div`
   background: #3c378e;
   border-radius: 8px;
   margin-left: -30%;
-
+  background-image: url(${cloud});
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   @media (max-width: 496px) {
     margin-left: 0;
     margin-top: 5%;

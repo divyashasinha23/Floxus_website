@@ -1,7 +1,7 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import styled from '@emotion/styled';
-// import './CampusSection.css';
+import campus from '../../images/campus.png';
 
 const CampusWrapper = styled.div`
   display: flex;
@@ -49,6 +49,7 @@ const CampusContent = styled.div`
   justify-content: center;
   @media (max-width: 496px) {
     height: auto;
+    margin-top: 10%;
   }
 `;
 
@@ -97,8 +98,22 @@ const CampusButton = styled.button`
 
 const CampusImage = styled.div`
   display: flex;
-  flex-basis: 20%;
+  flex-basis: 40%;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 50%;
+  }
+
+  @media (max-width: 496px) {
+    img {
+      height: 70%;
+      margin-bottom: 10%;
+      margin-top: 10%;
+    }
+  }
 `;
 
 function CampusSection() {
@@ -125,7 +140,9 @@ function CampusSection() {
               </CampusButton>
             </CampusContent>
           </CampusData>
-          <CampusImage></CampusImage>
+          <CampusImage>
+            <img src={campus} alt="campus image" />
+          </CampusImage>
         </CampusContainer>
       </CampusWrapper>
     </>
