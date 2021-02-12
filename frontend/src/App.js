@@ -12,7 +12,7 @@ function App() {
       <div>
         <Switch>
           <Route path="/" exact>
-            <Toolbar />
+            {/* <Toolbar /> */}
             <HeroSection />
             <Floxusfeature />
             <CourseSection />

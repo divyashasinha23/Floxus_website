@@ -10,6 +10,7 @@ const ToolbarLayout = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #3c378e;
+  ${'' /* position: fixed; */}
 `;
 
 const ToolbarWrapper = styled.div`

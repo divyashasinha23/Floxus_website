@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
 import * as FaIcons from 'react-icons/fa';
-
-const NavContainer = styled.div`
-  display: flex;
-  height: 10vh;
-  width: 100%;
-  background-color: #3c378e;
-  justify-content: center;
-  align-items: center;
-`;
+import Toolbar from '../ToolBar/Toolbar';
 
 const HeroWrapper = styled.div`
   display: flex;
@@ -18,6 +10,10 @@ const HeroWrapper = styled.div`
   background-color: #3c378e;
   justify-content: center;
   align-items: center;
+  @media (max-width: 496px) {
+    height: auto;
+    ${'' /* margin-top: 8vh; */}
+  }
 `;
 
 const HeroContainer = styled.div`
@@ -27,6 +23,7 @@ const HeroContainer = styled.div`
 
   @media (max-width: 496px) {
     flex-direction: column;
+    height: auto;
   }
 `;
 
@@ -36,6 +33,10 @@ const LeftContainer = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 496px) {
+    height: auto;
+  }
 `;
 
 const RightContainer = styled.div`
@@ -104,7 +105,7 @@ const ExploreButton = styled.button`
   cursor: pointer;
 
   @media (max-width: 496px) {
-    height: 55px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -112,6 +113,7 @@ class HeroSection extends Component {
   render() {
     return (
       <>
+        <Toolbar />
         <HeroWrapper>
           <HeroContainer>
             <LeftContainer>
