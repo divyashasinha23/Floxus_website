@@ -18,6 +18,13 @@ const CourseHeadingContainer = styled.div`
   height: 10vh;
   width: 80%;
   background-color: #f9f9f9;
+
+  @media (max-width: 496px) {
+    text-align: center;
+    p {
+      margin-top: 10%;
+    }
+  }
 `;
 
 const CourseHeading = styled.p`
@@ -34,6 +41,10 @@ const CourseWrapper = styled.div`
   background-color: #f9f9f9;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 496px) {
+    margin-top: 5%;
+  }
 `;
 
 const CourseBoxContainer = styled.div`
@@ -44,6 +55,10 @@ const CourseBoxContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 10%;
+
+  @media (max-width: 496px) {
+    width: 80%;
+  }
 `;
 
 const CourseSection = () => {
