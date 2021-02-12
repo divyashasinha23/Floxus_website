@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import projectIcon from '../../images/projectsicon.png';
+import skillIcon from '../../images/skillicon.png';
+import challengeIcon from '../../images/challenge.png';
 
 const FloxusFeatureLayout = styled.div`
   display: flex;
@@ -96,9 +99,38 @@ const FloxusFeatureCard = styled.div`
   border: 1.5px solid #cecce3;
   border-radius: 10px;
   box-shadow: 0px 10px 99px #4c4a6e26;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 496px) {
     margin-top: 15px;
+  }
+`;
+
+const FloxusCardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 90%;
+  justify-content: center;
+
+  .title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #5048ca;
+    ${'' /* margin-bottom: 0; */}
+  }
+
+  .description {
+    color: #827fa5;
+    font-size: 12px;
+    margin-top: 0;
+    font-weight: 400;
+  }
+
+  img {
+    height: 30px;
+    width: 30px;
   }
 `;
 
@@ -129,9 +161,36 @@ const Floxusfeature = () => {
             </FloxusFeatureDescriptionRight>
           </FloxusFeatureDescription>
           <FloxusFeatureContainer>
-            <FloxusFeatureCard></FloxusFeatureCard>
-            <FloxusFeatureCard></FloxusFeatureCard>
-            <FloxusFeatureCard></FloxusFeatureCard>
+            <FloxusFeatureCard>
+              <FloxusCardContent>
+                <img src={projectIcon} />
+                <p className="title">Create Amazing Projects</p>
+                <p className="description">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod.
+                </p>
+              </FloxusCardContent>
+            </FloxusFeatureCard>
+            <FloxusFeatureCard>
+              <FloxusCardContent>
+                <img src={skillIcon} />
+                <p className="title">Learn tech skills</p>
+                <p className="description">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod.
+                </p>
+              </FloxusCardContent>
+            </FloxusFeatureCard>
+            <FloxusFeatureCard>
+              <FloxusCardContent>
+                <img src={challengeIcon} />
+                <p className="title">Challenge based learning</p>
+                <p className="description">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod.
+                </p>
+              </FloxusCardContent>
+            </FloxusFeatureCard>
           </FloxusFeatureContainer>
         </FloxusFeatureWrapper>
       </FloxusFeatureLayout>
