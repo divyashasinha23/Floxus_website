@@ -9,6 +9,7 @@ const CourseBox = styled.div`
   border: 1px solid #cecce3;
   border-radius: 0px 48px 48px 0px;
   margin-top: 30px;
+  margin-left: 20px;
 `;
 
 const BoxLeft = styled.div`

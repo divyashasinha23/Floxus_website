@@ -13,6 +13,7 @@ const ButtonWrapper = styled.button`
   align-items: center;
   color: white;
   font-weight: 600;
+  cursor: pointer;
 `;
 
 const Button = (props) => {

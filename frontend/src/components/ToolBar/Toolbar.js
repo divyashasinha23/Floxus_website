@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Button from '../Buttons/Button';
+import logo from '../../images/logo.svg';
 
 const ToolbarLayout = styled.div`
   display: flex;
@@ -24,6 +25,7 @@ const LogoWrapper = styled.div`
   height: 100%;
   align-items: center;
   color: white;
+  cursor: pointer;
 `;
 
 const NavItemWrapper = styled.div`
@@ -33,6 +35,16 @@ const NavItemWrapper = styled.div`
   height: 100%;
   color: white;
   justify-content: space-around;
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  @media (max-width: 496px) {
+    display: none;
+  }
 `;
 
 const Toolbar = () => {
@@ -40,7 +52,9 @@ const Toolbar = () => {
     <>
       <ToolbarLayout>
         <ToolbarWrapper>
-          <LogoWrapper>Floxus</LogoWrapper>
+          <LogoWrapper>
+            <img style={{ height: '60%' }} src={logo} alt="logo" />
+          </LogoWrapper>
           <NavItemWrapper>
             <p>Courses</p>
             <p>Become a mentor</p>
