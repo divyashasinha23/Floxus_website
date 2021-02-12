@@ -4,7 +4,6 @@ import CourseSection from './components/CourseSection/CourseSection';
 import HeroSection from './components/HeroSection/HeroSection';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Floxusfeature from './components/FloxusUSP/Floxusfeature';
-import Toolbar from './components/ToolBar/Toolbar';
 
 function App() {
   return (
@@ -12,11 +11,10 @@ function App() {
       <div>
         <Switch>
           <Route path="/" exact>
-            {/* <Toolbar /> */}
             <HeroSection />
             <Floxusfeature />
-            <CourseSection />
             <CampusSection />
+            <CourseSection />
           </Route>
           <Route path="/course">
             <CertificationSection />

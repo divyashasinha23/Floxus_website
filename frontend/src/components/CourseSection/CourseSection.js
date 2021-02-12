@@ -57,7 +57,7 @@ const CourseBoxContainer = styled.div`
   margin-bottom: 10%;
 
   @media (max-width: 496px) {
-    width: 80%;
+    width: 90%;
   }
 `;
 

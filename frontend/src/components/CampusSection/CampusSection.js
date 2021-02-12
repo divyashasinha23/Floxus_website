@@ -10,6 +10,10 @@ const CampusWrapper = styled.div`
   background-color: #3c378e;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 496px) {
+    margin-top: 10%;
+  }
 `;
 
 const CampusContainer = styled.div`
@@ -20,6 +24,7 @@ const CampusContainer = styled.div`
 
   @media (max-width: 496px) {
     flex-direction: column;
+    height: auto;
   }
 `;
 
@@ -29,6 +34,10 @@ const CampusData = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 496px) {
+    height: auto;
+  }
 `;
 
 const CampusContent = styled.div`
@@ -36,9 +45,10 @@ const CampusContent = styled.div`
   flex-direction: column;
   height: 50%;
   width: 100%;
-
+  ${'' /* background-color: black; */}
+  justify-content: center;
   @media (max-width: 496px) {
-    height: 80%;
+    height: auto;
   }
 `;
 
@@ -66,19 +76,22 @@ const Description = styled.div`
 
 const CampusButton = styled.button`
   display: flex;
-  width: 200px;
+  width: 150px;
+  height: 40px;
   background: transparent;
   border: 2px solid #fff;
-  border-radius: 22.5px;
+  border-radius: 20px;
   margin-top: 20px;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 25px;
+  font-size: 17px;
   font-weight: 500;
   cursor: pointer;
-  padding: 15px 32px @media (max-width: 496px) {
-    height: 55px;
+
+  @media (max-width: 496px) {
+    ${'' /* height: 55px; */}
+    margin-bottom:10px;
   }
 `;
 
