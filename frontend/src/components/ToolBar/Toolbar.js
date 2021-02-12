@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Button from '../Buttons/Button';
 
 const ToolbarLayout = styled.div`
   display: flex;
@@ -44,7 +45,7 @@ const Toolbar = () => {
             <p>Courses</p>
             <p>Become a mentor</p>
             <p>Log In</p>
-            <p>Signup</p>
+            <Button value="Signup" />
           </NavItemWrapper>
         </ToolbarWrapper>
       </ToolbarLayout>
