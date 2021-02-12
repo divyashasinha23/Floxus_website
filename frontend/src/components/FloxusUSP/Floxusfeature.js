@@ -84,6 +84,8 @@ const FloxusFeatureContainer = styled.div`
 
   @media (max-width: 496px) {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 

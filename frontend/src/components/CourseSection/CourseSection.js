@@ -43,7 +43,7 @@ const CourseWrapper = styled.div`
   align-items: center;
 
   @media (max-width: 496px) {
-    margin-top: 5%;
+    margin-top: 10%;
   }
 `;
 
