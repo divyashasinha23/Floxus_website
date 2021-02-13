@@ -18,8 +18,9 @@ const HeroWrapper = styled.div`
 
 const HeroContainer = styled.div`
   display: flex;
-  height: 100vh;
+  height: auto;
   width: 80%;
+  ${'' /* background-color: black; */}
 
   @media (max-width: 496px) {
     flex-direction: column;
@@ -30,7 +31,7 @@ const HeroContainer = styled.div`
 const LeftContainer = styled.div`
   display: flex;
   flex-basis: 60%;
-  height: 100vh;
+  height: auto;
   justify-content: center;
   align-items: center;
 
@@ -42,7 +43,7 @@ const LeftContainer = styled.div`
 const RightContainer = styled.div`
   display: flex;
   flex-basis: 40%;
-  height: 100vh;
+  height: 100%;
 
   @media (max-width: 496px) {
     display: none;
@@ -52,8 +53,9 @@ const RightContainer = styled.div`
 const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: 100%;
   width: 100%;
+  justify-content: center;
 
   @media (max-width: 496px) {
     height: 80%;
@@ -113,7 +115,6 @@ class HeroSection extends Component {
   render() {
     return (
       <>
-        <Toolbar />
         <HeroWrapper>
           <HeroContainer>
             <LeftContainer>

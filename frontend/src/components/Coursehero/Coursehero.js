@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import pythonHero from '../../images/python_hero.png';
 
 const CourseHeroLayout = styled.div`
   display: flex;
@@ -51,6 +52,12 @@ const CourseHeroRight = styled.div`
   display: flex;
   flex-basis: 50%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 95%;
+  }
 `;
 
 const Coursehero = () => {
@@ -77,7 +84,9 @@ const Coursehero = () => {
               nonumy
             </li>
           </CourseHeroLeft>
-          <CourseHeroRight></CourseHeroRight>
+          <CourseHeroRight>
+            <img src={pythonHero} />
+          </CourseHeroRight>
         </CourseHeroWrapper>
       </CourseHeroLayout>
     </>

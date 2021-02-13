@@ -13,6 +13,7 @@ function App() {
       <div>
         <Switch>
           <Route path="/" exact>
+            <Toolbar />
             <HeroSection />
             <Floxusfeature />
             <CampusSection />
