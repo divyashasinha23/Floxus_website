@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import pythonHero from '../../images/python_hero.png';
+import Button from '../Buttons/Button';
 
 const CourseHeroLayout = styled.div`
   display: flex;
@@ -60,6 +61,46 @@ const CourseHeroRight = styled.div`
   }
 `;
 
+const CourseFeaturedata = styled.div`
+  display: flex;
+  width: 60%;
+  height: 45px;
+  ${'' /* background-color: black; */}
+  margin-top: 5%;
+
+  div {
+    display: flex;
+    flex-basis: 33.3%;
+    height: 100%;
+    flex-direction: column;
+    border-right: 1px solid white;
+    color: white;
+    ${'' /* align-items: center; */}
+    justify-content: center;
+
+    p {
+      font-size: 11px;
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+`;
+
+const RSVPSection = styled.div`
+  display: flex;
+  align-items: center;
+
+  Button {
+    margin-left: 20px;
+  }
+`;
+
 const Coursehero = () => {
   return (
     <>
@@ -83,6 +124,26 @@ const Coursehero = () => {
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy
             </li>
+            <CourseFeaturedata>
+              <div>
+                <p>48+ hours</p>
+                <p>Live Classes</p>
+              </div>
+              <div>
+                <p>3</p>
+                <p>Industrial Projects</p>
+              </div>
+              <div>
+                <p>24/7</p>
+                <p>Contact Support</p>
+              </div>
+            </CourseFeaturedata>
+            <RSVPSection>
+              <p style={{ fontSize: '35px', fontWeight: 400, color: 'white' }}>
+                ₹ 3000
+              </p>
+              <Button value="Enroll" />
+            </RSVPSection>
           </CourseHeroLeft>
           <CourseHeroRight>
             <img src={pythonHero} />
