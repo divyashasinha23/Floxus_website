@@ -10,12 +10,21 @@ const CourseHeroLayout = styled.div`
   background-color: #3c378e;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 496px) {
+    height: auto;
+  }
 `;
 
 const CourseHeroWrapper = styled.div`
   display: flex;
   width: 80%;
   height: 70vh;
+
+  @media (max-width: 496px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 const CourseHeroLeft = styled.div`
@@ -58,6 +67,13 @@ const CourseHeroRight = styled.div`
 
   img {
     height: 95%;
+  }
+
+  @media (max-width: 496px) {
+    display: none;
+    img {
+      width: 100%;
+    }
   }
 `;
 
