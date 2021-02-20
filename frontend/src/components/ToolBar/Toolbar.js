@@ -9,7 +9,8 @@ const ToolbarLayout = styled.div`
   height: 10vh;
   justify-content: center;
   align-items: center;
-  background-color: #3c378e;
+  background-color: white;
+  ${'' /* background-color: #3c378e; */}
   ${'' /* position: fixed; */}
 `;
 
@@ -25,7 +26,7 @@ const LogoWrapper = styled.div`
   width: 20%;
   height: 100%;
   align-items: center;
-  color: white;
+  color: black;
   cursor: pointer;
 `;
 
@@ -34,7 +35,7 @@ const NavItemWrapper = styled.div`
   width: 50%;
   align-items: center;
   height: 100%;
-  color: white;
+  color: black;
   justify-content: space-around;
 
   p {

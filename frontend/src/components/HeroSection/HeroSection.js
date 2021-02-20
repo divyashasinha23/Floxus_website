@@ -7,11 +7,15 @@ const HeroWrapper = styled.div`
   display: flex;
   height: 70vh;
   width: 100%;
-  background-color: #3c378e;
+  background: transparent
+    linear-gradient(103.88deg, #030528 17.31%, #050b7d 100%);
+  ${'' /* background-color: #3c378e; */}
   justify-content: center;
   align-items: center;
   @media (max-width: 496px) {
     height: auto;
+    background: transparent
+      linear-gradient(120deg, #030528 17.31%, #050b7d 100%);
     ${'' /* margin-top: 8vh; */}
   }
 `;

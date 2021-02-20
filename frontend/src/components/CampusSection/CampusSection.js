@@ -7,12 +7,16 @@ const CampusWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #3c378e;
+  background: transparent
+    linear-gradient(103.88deg, #030528 17.31%, #050b7d 100%);
+  ${'' /* background-color: #3c378e; */}
   justify-content: center;
   align-items: center;
 
   @media (max-width: 496px) {
     margin-top: 10%;
+    background: transparent
+      linear-gradient(180deg, #030528 17.31%, #050b7d 100%);
   }
 `;
 
