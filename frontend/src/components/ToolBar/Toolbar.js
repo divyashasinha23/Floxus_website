@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Button from '../Buttons/Button';
-import logo from '../../images/logo.svg';
+import logo from '../../images/blue_logo.svg';
 
 const ToolbarLayout = styled.div`
   display: flex;
@@ -55,7 +55,7 @@ const Toolbar = () => {
       <ToolbarLayout>
         <ToolbarWrapper>
           <LogoWrapper>
-            <img style={{ height: '60%' }} src={logo} alt="logo" />
+            <img style={{ height: '30%' }} src={logo} alt="logo" />
           </LogoWrapper>
           <NavItemWrapper>
             <p>Courses</p>

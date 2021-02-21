@@ -68,6 +68,7 @@ const FloxusFeatureDescriptionRight = styled.div`
 const Heading = styled.p`
   font-size: 50px;
   color: #4c4a6e;
+  ${'' /* color:#030528; */}
   font-weight: 600;
   padding-left: 20%;
   letter-spacing: 1px;
@@ -117,7 +118,8 @@ const FloxusCardContent = styled.div`
   .title {
     font-size: 15px;
     font-weight: 600;
-    color: #5048ca;
+    ${'' /* color: #5048ca; */}
+
     ${'' /* margin-bottom: 0; */}
   }
 
