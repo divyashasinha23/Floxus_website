@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Floxusfeature from './components/FloxusUSP/Floxusfeature';
 import Coursehero from './components/Coursehero/Coursehero';
 import Toolbar from './components/ToolBar/Toolbar';
+import SyllabusCourse from './components/SyllabusCourse/SyllabusCourse';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/course">
             <Toolbar />
             <Coursehero />
+            <SyllabusCourse />
             {/* <CertificationSection /> */}
           </Route>
         </Switch>
