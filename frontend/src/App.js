@@ -7,6 +7,7 @@ import Floxusfeature from './components/FloxusUSP/Floxusfeature';
 import Coursehero from './components/Coursehero/Coursehero';
 import Toolbar from './components/ToolBar/Toolbar';
 import SyllabusCourse from './components/SyllabusCourse/SyllabusCourse';
+import FAQSection from './components/FAQs/FAQSection';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Toolbar />
             <Coursehero />
             <SyllabusCourse />
+            <FAQSection />
             {/* <CertificationSection /> */}
           </Route>
         </Switch>
