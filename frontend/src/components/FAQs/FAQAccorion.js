@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Syllbus_Accordion() {
+function FAQAccorion() {
   const classes = useStyles();
 
   return (
@@ -145,4 +145,4 @@ function Syllbus_Accordion() {
   );
 }
 
-export default Syllbus_Accordion;
+export default FAQAccorion;

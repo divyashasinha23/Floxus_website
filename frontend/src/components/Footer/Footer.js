@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import FooterAccordion from '../FooterAccordion/FooterAccordion';
 
 const FooterContainer = styled.div`
   display: flex;
@@ -10,6 +11,20 @@ const FooterContainer = styled.div`
   background-color: #111111;
 `;
 
+const FooterAccordionWrapper = styled.div`
+  ${'' /* display: flex; */}
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: none;
+
+  @media (max-width: 496px) {
+    display: flex;
+  }
+`;
+
 const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,6 +32,10 @@ const FooterWrapper = styled.div`
   height: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
+
+  @media (max-width: 496px) {
+    display: none;
+  }
 `;
 
 const FooterUp = styled.div`
@@ -77,6 +96,10 @@ const InputContainer = styled.div`
     &:focus {
       outline: none;
     }
+  }
+
+  @media (max-width: 496px) {
+    margin-bottom: 2%;
   }
 `;
 
@@ -166,6 +189,13 @@ const Footer = () => {
             </LinksArea>
           </FooterBottom>
         </FooterWrapper>
+        <FooterAccordionWrapper>
+          <InputContainer>
+            <input type="text" placeholder="Email" />
+            <button>Submit</button>
+          </InputContainer>
+          <FooterAccordion />
+        </FooterAccordionWrapper>
       </FooterContainer>
     </>
   );
