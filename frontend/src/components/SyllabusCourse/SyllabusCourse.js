@@ -12,11 +12,12 @@ const SyllabusContainer = styled.div`
 
 const SyllabusWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   width: 70%;
   height: 100%;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+  padding-top: 2%;
   padding-bottom: 5%;
 
   @media (max-width: 496px) {
@@ -24,11 +25,19 @@ const SyllabusWrapper = styled.div`
   }
 `;
 
+const Heading = styled.div`
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 5%;
+  margin-bottom: 5%;
+`;
+
 const SyllabusCourse = () => {
   return (
     <>
       <SyllabusContainer>
         <SyllabusWrapper>
+          <Heading>Curriculum</Heading>
           <Syllbus_Accordion />
         </SyllabusWrapper>
       </SyllabusContainer>

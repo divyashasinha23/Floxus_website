@@ -5,7 +5,8 @@ const CertificateWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #3c378e;
+  background: transparent
+    linear-gradient(103.88deg, #030528 17.31%, #050b7d 100%);
   justify-content: center;
   align-items: center;
 `;
