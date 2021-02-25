@@ -12,6 +12,7 @@ const FooterContainer = styled.div`
 
 const FooterWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   width: 70%;
   height: 100%;
   padding-top: 2%;
@@ -71,11 +72,49 @@ const InputContainer = styled.div`
     color: #2b2b2b;
     font-size: 17px;
     font-weight: 600;
+    cursor: pointer;
 
     &:focus {
       outline: none;
     }
   }
+`;
+
+const FooterBottom = styled.div`
+  display: flex;
+  width: 100%;
+  height: auto;
+`;
+
+const LinksArea = styled.div`
+  display: flex;
+  height: 300px;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+`;
+
+const LinkContentBox = styled.div`
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  ${'' /* justify-content:center; */}
+  flex-basis: 25%;
+  color: white;
+
+  p {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+`;
+
+const Heading = styled.div`
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 5%;
+  margin-bottom: 5%;
 `;
 
 const Footer = () => {
@@ -91,6 +130,41 @@ const Footer = () => {
               </InputContainer>
             </FooterUpLeft>
           </FooterUp>
+          <FooterBottom>
+            <LinksArea>
+              <LinkContentBox>
+                <Heading>Company</Heading>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Media</p>
+                <p>Contact Us</p>
+              </LinkContentBox>
+              <LinkContentBox>
+                <Heading>Resources</Heading>
+                <p>Blogs</p>
+                <p>Guides</p>
+                <p>Interview Questions</p>
+                <p>Webinars</p>
+                <p>Podcasts</p>
+              </LinkContentBox>
+              <LinkContentBox>
+                <Heading>Partner With Us</Heading>
+                <p>Become an Instructor</p>
+                <p>Become Training Associate</p>
+                <p>Become Certification Partner</p>
+                <p>Become Community Partner</p>
+              </LinkContentBox>
+
+              <LinkContentBox>
+                <Heading>Help & Support</Heading>
+                <p>Course Info</p>
+                <p>FAQs</p>
+                <p>Terms and Conditions</p>
+                <p>Privacy Policy</p>
+                <p>Refund and cancellation Policy</p>
+              </LinkContentBox>
+            </LinksArea>
+          </FooterBottom>
         </FooterWrapper>
       </FooterContainer>
     </>

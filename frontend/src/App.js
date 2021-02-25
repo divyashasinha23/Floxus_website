@@ -21,6 +21,7 @@ function App() {
             <Floxusfeature />
             <CampusSection />
             <CourseSection />
+            <Footer />
           </Route>
           <Route path="/course">
             <Toolbar />
