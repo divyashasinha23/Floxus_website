@@ -8,6 +8,7 @@ import Coursehero from './components/Coursehero/Coursehero';
 import Toolbar from './components/ToolBar/Toolbar';
 import SyllabusCourse from './components/SyllabusCourse/SyllabusCourse';
 import FAQSection from './components/FAQs/FAQSection';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Coursehero />
             <SyllabusCourse />
             <FAQSection />
+            <Footer />
             {/* <CertificationSection /> */}
           </Route>
         </Switch>
