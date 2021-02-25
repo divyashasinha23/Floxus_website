@@ -9,7 +9,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
+    border: 'none',
   },
+
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
@@ -21,7 +23,7 @@ function Syllbus_Accordion() {
 
   return (
     <div className={classes.root}>
-      <Accordion>
+      <Accordion style={{ boxShadow: 'none', borderRadius: '5px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -44,7 +46,12 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion
+        style={{
+          boxShadow: 'none',
+          borderRadius: '5px',
+        }}
+      >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -59,7 +66,7 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={{ boxShadow: 'none', borderRadius: '5px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -74,7 +81,7 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion style={{ boxShadow: 'none', borderRadius: '5px' }}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -89,7 +96,13 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion
+        style={{
+          boxShadow: 'none',
+          borderRadius: '5px',
+          border: 'none',
+        }}
+      >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -104,7 +117,9 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion
+        style={{ marginBottom: '10px', boxShadow: 'none', borderRadius: '5px' }}
+      >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
