@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Chips from '../Chips/Chips';
+import BatchContact from '../BatchContact/BatchContact';
 
 const CourseOverviewContainer = styled.div`
   display: flex;
@@ -100,6 +101,8 @@ const CourseOverviewRight = styled.div`
   display: flex;
   flex-basis: 40%;
   height: 100%;
+  justify-content: center;
+  align-items: center;
 
   ${'' /* background-color: red; */}
 `;
@@ -137,7 +140,9 @@ const CourseOverview = () => {
               </ul>
             </CoursePrerequisite>
           </CourseOverviewLeft>
-          <CourseOverviewRight></CourseOverviewRight>
+          <CourseOverviewRight>
+            <BatchContact />
+          </CourseOverviewRight>
         </CourseOverviewWrapper>
       </CourseOverviewContainer>
     </>
