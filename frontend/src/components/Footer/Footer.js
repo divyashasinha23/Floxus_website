@@ -99,7 +99,8 @@ const InputContainer = styled.div`
   }
 
   @media (max-width: 496px) {
-    margin-bottom: 2%;
+    margin-bottom: 4%;
+    margin-top: 4%;
   }
 `;
 

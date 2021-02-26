@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
+import MuiAccordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
@@ -10,11 +12,30 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     border: 'none',
+    boxShadow: 'none',
+    marginTop: '5px',
+    '&:not(:last-child)': {
+      borderBottom: 0,
+    },
+    '&:before': {
+      display: 'none',
+      borderTop: 'none',
+    },
   },
 
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
+  },
+
+  hideBorder: {
+    marginTop: '8px',
+    boxShadow: 'none',
+    borderRadius: '5px',
+
+    '&.MuiAccordion-root:before': {
+      display: 'none',
+    },
   },
 }));
 
@@ -46,12 +67,7 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion
-        style={{
-          boxShadow: 'none',
-          borderRadius: '5px',
-        }}
-      >
+      <Accordion className={classes.hideBorder}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -66,7 +82,7 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{ boxShadow: 'none', borderRadius: '5px' }}>
+      <Accordion className={classes.hideBorder}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -81,7 +97,7 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{ boxShadow: 'none', borderRadius: '5px' }}>
+      <Accordion className={classes.hideBorder}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -96,13 +112,7 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion
-        style={{
-          boxShadow: 'none',
-          borderRadius: '5px',
-          border: 'none',
-        }}
-      >
+      <Accordion className={classes.hideBorder}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -117,9 +127,7 @@ function Syllbus_Accordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion
-        style={{ marginBottom: '10px', boxShadow: 'none', borderRadius: '5px' }}
-      >
+      <Accordion className={classes.hideBorder}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
