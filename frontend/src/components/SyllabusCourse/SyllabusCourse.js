@@ -42,6 +42,14 @@ const Heading = styled.div`
   margin-bottom: 5%;
 `;
 
+const SyllabusRight = styled.div`
+  display: flex;
+  flex-basis: 40%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+`;
+
 const SyllabusCourse = () => {
   return (
     <>
@@ -51,6 +59,7 @@ const SyllabusCourse = () => {
             <Heading>Curriculum</Heading>
             <Syllbus_Accordion />
           </SyllabusWrapper>
+          <SyllabusRight></SyllabusRight>
         </SyllabusContain>
       </SyllabusContainer>
     </>
