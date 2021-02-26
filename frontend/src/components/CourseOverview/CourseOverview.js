@@ -5,7 +5,7 @@ import Chips from '../Chips/Chips';
 const CourseOverviewContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 70vh;
+  height: auto;
   background-color: #f9f9f9;
   justify-content: center;
   align-items: center;
@@ -14,14 +14,21 @@ const CourseOverviewContainer = styled.div`
 const CourseOverviewWrapper = styled.div`
   display: flex;
   width: 80%;
-  height: 80%;
+  height: auto;
+  margin-top: 2%;
+
+  @media (max-width: 496px) {
+    flex-direction: column;
+    width: 90%;
+    margin-top: 6%;
+  }
 `;
 
 const CourseOverviewLeft = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 60%;
-  height: 100%;
+
   ${'' /* background-color: black; */}
 `;
 
@@ -57,6 +64,35 @@ const CourseOverviewDetails = styled.div`
     width: 100%;
     height: auto;
     margin-left: 10px;
+    margin-bottom: 15px;
+  }
+`;
+
+const CoursePrerequisite = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-basis: 30%;
+  background-color: white;
+  margin-top: 5%;
+
+  .heading {
+    font-size: 16px;
+    font-weight: 500;
+    color: #636363;
+    margin-left: 17px;
+  }
+
+  ul {
+    margin-left: 5px;
+    font-size: 12px;
+    color: #000000;
+    margin-top: 0;
+    font-weight: 500;
+  }
+
+  ul li {
+    margin-top: 5px;
   }
 `;
 
@@ -64,6 +100,7 @@ const CourseOverviewRight = styled.div`
   display: flex;
   flex-basis: 40%;
   height: 100%;
+
   ${'' /* background-color: red; */}
 `;
 
@@ -93,6 +130,12 @@ const CourseOverview = () => {
                 <Chips title="Object Oriented Python" />
               </div>
             </CourseOverviewDetails>
+            <CoursePrerequisite>
+              <p className="heading">Prerequisite</p>
+              <ul>
+                <li>There is no prerequisite for this course</li>
+              </ul>
+            </CoursePrerequisite>
           </CourseOverviewLeft>
           <CourseOverviewRight></CourseOverviewRight>
         </CourseOverviewWrapper>
