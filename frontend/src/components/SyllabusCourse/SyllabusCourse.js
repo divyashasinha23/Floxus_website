@@ -10,10 +10,20 @@ const SyllabusContainer = styled.div`
   align-items: center;
 `;
 
+const SyllabusContain = styled.div`
+  display: flex;
+  width: 80%;
+  height: 100%;
+
+  @media (max-width: 496px) {
+    flex-direction: column;
+  }
+`;
+
 const SyllabusWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 70%;
+  flex-basis: 60%;
   height: 100%;
   justify-content: center;
   align-items: center;
@@ -36,10 +46,12 @@ const SyllabusCourse = () => {
   return (
     <>
       <SyllabusContainer>
-        <SyllabusWrapper>
-          <Heading>Curriculum</Heading>
-          <Syllbus_Accordion />
-        </SyllabusWrapper>
+        <SyllabusContain>
+          <SyllabusWrapper>
+            <Heading>Curriculum</Heading>
+            <Syllbus_Accordion />
+          </SyllabusWrapper>
+        </SyllabusContain>
       </SyllabusContainer>
     </>
   );
